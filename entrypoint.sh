@@ -2,7 +2,6 @@
 set -m
 
 TIME="$CRON_TIME"
-DATABASE="$MONGO_DATABASE"
 gs_project_id="$PROJECT_ID"
 gs_access_key_id="$GS_ID"
 gs_secret_access_key="$GS_SECRET"
@@ -20,7 +19,7 @@ default_api_version = 1
 default_project_id = $gs_project_id
 EOF
 
-echo "$TIME /mongodb-backup.sh" > /cron/"$DATABASE"
-devcron.py /cron/"$DATABASE"
+echo "$TIME /mongodb-backup.sh" > /cron/backup_db
+devcron.py /cron/backup_db
 
 fg

@@ -12,8 +12,8 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 && \
 
 RUN add-apt-repository ppa:fkrull/deadsnakes && \
   apt-get update && \
-  apt-get install -y python3.5 mercurial && \
-  apt-get install -y python-pip
+  apt-get install -y python3.5 mercurial --force-yes && \
+  apt-get install -y python-pip --force-yes
 
 RUN pip install -e hg+https://bitbucket.org/dbenamy/devcron#egg=devcron
 RUN mkdir /cron && \
