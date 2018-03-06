@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
-MAINTAINER Jadson Lourenço <jadsonlourenco@gmail.com>
-LABEL Description="Mongodb cron backup to Google Cloud Storage (GCE)"
+MAINTAINER Lucas Neves <lcneves@gmail.com>
+LABEL Description="Mongodb cron backup of multiple databases to Google Cloud Storage (GCE), forked from Jadson Lourenço <jadsonlourenco@gmail.com>"
 
 RUN apt-get update && \
   apt-get install -y software-properties-common python-software-properties curl
