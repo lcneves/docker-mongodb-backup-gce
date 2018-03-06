@@ -2,7 +2,7 @@
 
 ## How To Use
 ```
-docker run -d -e PROJECT_ID=unique_id_on_gce -e GS_ID=gs_access_key_id -e GS_SECRET=gs_secret_access_key -e MONGO_HOST=127.0.0.1:27017 -e MONGO_DATABASE="database1 database2 ..." -e MONGO_USER=user -e MONGO_PASS=password -e BUCKET=storage-bucket -e CRON_TIME="0 1 * * *" jadsonlourenco/mongodb-backup-gce
+docker run -d -e PROJECT_ID=unique_id_on_gce -e GS_ID=gs_access_key_id -e GS_SECRET=gs_secret_access_key -e MONGO_HOST=127.0.0.1:27017 -e MONGO_DATABASE="database1 database2 ..." -e MONGO_USER=user -e MONGO_PASS=password -e BUCKET=storage-bucket -e CRON_TIME="0 1 * * *" lcneves/mongodb-backup-gce
 ```
 
 ## Environment Variables
