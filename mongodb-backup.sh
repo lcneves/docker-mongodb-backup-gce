@@ -12,6 +12,7 @@ BACKUP_PATH="/mnt/data/dump/"
 
 # Loops each word in $DB_NAME
 for DB_NAME_EACH in $DB_NAME
+do
   CURRENT_DATE=$(date +"%Y%m%d-%H%M")
 
   # Backup filename
@@ -28,6 +29,7 @@ for DB_NAME_EACH in $DB_NAME
   echo "Copying $BACKUP_PATH$BACKUP_FILENAME to gs://$BUCKET_NAME/$DB_NAME_EACH/"
   /root/gsutil/gsutil cp "$BACKUP_PATH""$BACKUP_FILENAME" gs://"$BUCKET_NAME"/"$DB_NAME_EACH"/ 2>&1
 done
+
 echo "Copying finished"
 echo "Removing backup data"
 rm -rf $BACKUP_PATH*
