@@ -28,8 +28,9 @@ do
   # Copy to Google Cloud Storage
   echo "Copying $BACKUP_PATH$BACKUP_FILENAME to gs://$BUCKET_NAME/$DB_NAME_EACH/"
   /root/gsutil/gsutil cp "$BACKUP_PATH""$BACKUP_FILENAME" gs://"$BUCKET_NAME"/"$DB_NAME_EACH"/ 2>&1
+
+  # Remove backup data from local storage
+  rm -rf $BACKUP_PATH*
 done
 
 echo "Copying finished"
-echo "Removing backup data"
-rm -rf $BACKUP_PATH*
